@@ -1,6 +1,6 @@
 #Nexttodo: Fix GetMix first with other jobboards via print board funtion
 #Todo: refractor code for numpy for loop
-# Implement Solid Principles
+# Implement Functional programming
 
 import webbrowser
 from openpyxl import load_workbook

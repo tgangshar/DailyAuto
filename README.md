@@ -1,10 +1,11 @@
-*Dailyauto.py*
+ *Dailyauto.py*
 A script to not only automate daily tasks but also documenting 
 
+Learning Functional programing
 # Current Daily Tasks: 
-Learning: Lessons that has a formal structure2
+Learning: Lessons that have a formal structure
 Projects: Anything that can count towards "working."
-Applying: To jobs and Parttime
+Applying: To jobs and freelance
 Refactoring: Editing Code without changing its expected behavior, 
 Misc - InProgress:
 Note: No such thing as edits or drafts. 
