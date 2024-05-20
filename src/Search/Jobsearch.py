@@ -1,6 +1,5 @@
 #Nexttodo: Fix GetMix first with other jobboards via print board funtion
 #Todo: refractor code for numpy for loop
-# Implement Functional programming
 
 import webbrowser
 from openpyxl import load_workbook
@@ -9,11 +8,12 @@ from numpy import random
 from googlesearch import search
 #import markdownify
 
-data_file =  os.path.abspath(os.getcwd())  + "\\Job Search Spring 2023.xlsx"
+data_file =  "..\\..\\Job Search Spring 2023.xlsx"
 wb = load_workbook(data_file)
 Company_ws = wb['Companies']
 JobBoard_ws = wb["JobBoard"]
 
+# in progress
 def isBlank(ws) -> bool:
    rows = list(ws)
    empty = {}
@@ -32,6 +32,7 @@ def deleteBlank(ws) -> None:
          ws.delete_row(row[0].row, 1)
          deleteBlank(ws)
  
+# in progress
 def deleteRepeats() -> bool:
    #In case multiple worksheet are available
    #for ws in wb:
@@ -53,13 +54,18 @@ def deleteRepeats() -> bool:
       return True
    else:
       return False
+   
 # Retriving Functions
+
 # Retriving name of company
 def GetCompany(size = -1):
    company_rows = list(Company_ws.rows)
    return [cells[0].value for cells in company_rows[1:size]]
 #Retriving name of company and thier career sites
-def GetCareerSites(size = -1):   
+def GetCareerSites(keyword, size = -1):   
+   data_file =  "..\\..\\Job Search Spring 2023.xlsx"
+   wb = load_workbook(data_file)
+   Company_ws = wb['Companies']
    company_rows = list(Company_ws.rows)
    return {cells[0].value: "site:" + str(cells[1].value) + keyword for cells in company_rows[1:size]}
 #Retriving name site of job boards
@@ -69,7 +75,7 @@ def GetJobBoards(size = -1):
    return {cells[0].value:cells[1].value for cells in Board_rows[1:size]}
 # Creating a query for comapnies based on certain job boards
 # ToDo: multiple jobboards? prob not
-def GetMix():
+def GetMix(keyword):
    boards = GetJobBoards()
    
    prompt = "Pick one of these Job Boards:\n" + str(list(boards.keys())) + ": \n"
@@ -90,14 +96,18 @@ def GetMix():
 def findCareerSite(sites, size = 10):
    print(size,"sites out of", len(sites))
    save = []
+  
    for site in sites[:size]:
       query = str(site) + " careersites"
       for j in search(query, tld="co.in", num=3, stop=4, pause=2):
-         print(j)
+         print("ok")
          save.append(j)
+   
+   #save = [list(search(query, num=3) for query in sites[:size])]
    return save
 
 #Adding functions
+#in progress
 def addCareerSite(sites) -> None:
    directory  = os.path.abspath(os.getcwd()) 
    NewSites = wb.create_sheet("New Company Sites")
@@ -119,7 +129,9 @@ def PrintSites(sites) -> None:
       print(site)
 def OpenSites(sites, size=10) -> None:
    #query = ""
-   print("Amount of sites: ", len(sites))
+   length = len(sites)
+   print("Amount of sites: ", length)
+   size = length if length < size else size
       
    random.shuffle(sites)
    for site in sites[:int(size)]:
@@ -143,11 +155,12 @@ if __name__ == "__main__":
    if '-custom' in sys.argv:
       keyword = input("Enter keyword: ")
    if '-teal' in sys.argv:
-      OpenSites("https://app.tealhq.com/home",1)
+      teal = "https://app.tealhq.com/home"
+      OpenSites(teal,1)
    if '-c' in sys.argv:
       print("we are Opening Sites")
       print("--------------------")
-      c = GetCareerSites()
+      c = GetCareerSites(keyword)
       OpenSites(list(c.values()))
    elif '-b' in sys.argv:
       print("Time to check Job Boards")
@@ -157,7 +170,7 @@ if __name__ == "__main__":
    elif '-m' in sys.argv:
       print("we are mixing up")
       print("--------------------")
-      m = GetMix()
+      m = GetMix(keyword)
       GoogleSites(m)
    elif '-d' in sys.argv:
       print("Starting deleting attempt")

@@ -14,7 +14,7 @@ Note: No such thing as edits or drafts.
 | ------------------ | ------------------------------------------ | ------------ | ----------- | ----------------- |
 | Rust               | Golang Compiler                            | Teal         |             |                   |
 | React + TypeScript | Dailyautomate: Translate Python and Rust   | Jobsearch.py |             |                   |
-|                    | UI for Automate Menu with React/Typescript | Part-time    |             |                   |
+| Review Baics       | UI for Automate Menu with React/Typescript | Part-time    |             |                   |
 
 
 
