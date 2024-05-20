@@ -1,0 +1,25 @@
+1. What are Basic Components in a SOC
+2. What are Fundamentals of a SOC
+3. What is a SIEM solution and how does it work
+4. Describe an efficient and effective method which can be used to prevent violations of computer security procedures
+5. SOC analysts need to gather information from multiple sources. How can you determine which information is relevant and differentiate between false positives and false negative logs
+6. Explain a plan of action which will safeguard computer files against modification, destruction or disclosure
+7. IN your firewall do you prefer filtered ports or closed ports
+8. Which IR methodology do you prefer? Explain why you use it
+9. Consider you are looking at the incoming traffic, but it is encrypted, how would you figure out if the payloads are malicious or benign
+10. If a company wants to implement a new security event manager. Describe your approach for the implementation
+11. What are the multiple sources from which a SOC receives log and data
+12. What is the difference between traditional and next generation SOC
+13. How would you define a cyber threat or cyber-attack
+14. What is the difference between IOC and an IOA
+15. How would you define local logging and central logging? What is the difference
+16. What are the concepts of handling alerts, triaging them and analyzing the alerts
+17. In your opinion why do you think there is a need for a threat intelligence driven SOC
+18. What are the phases of incident handling
+19. Define Insider incidents and how would you respond to such events
+20. Does only setting up a SIEM solution complete a SOC
+21. Consider that a device is not sharing any logs, being a SOC analyst how would you identity and detect that particular device
+22. Consider an in-house application or any other custom built application which does not have the capability to share its log how would you handle and monitor such applications
+23. At times certain applications send raw logs, being a SOC analyst how would you parse such logs
+24. How can you evaluated how Mature is your SOC
+25. Being an analyst how important is a SOC playbook or workflow
