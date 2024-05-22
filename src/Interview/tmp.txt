@@ -1,3 +1,6 @@
-| Questions | Answers ||4. Describe an efficient and effective method which can be used to prevent violations of computer security procedures: |asdfljasl|
-|6. Explain a plan of action which will safeguard computer files against modification, destruction or disclosure: |al;skdjlk|
-|24. How can you evaluated how Mature is your SOC: |asdl;fgh|
+|Questions|Answers|
+|...|...|
+|22. Consider an in-house application or any other custom built application which does not have the capability to share its log how would you handle and monitor such applications|STIKE|
+|8. Which IR methodology do you prefer? Explain why you use it||
+
+22,8
