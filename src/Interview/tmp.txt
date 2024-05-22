@@ -1,4 +1,3 @@
-15. How would you define local logging and central logging? What is the differenceasdgklhag
-2. What are Fundamentals of a SOCasgag
-20. Does only setting up a SIEM solution complete a SOCagwae
-12. What is the difference between traditional and next generation SOCe
+| Questions | Answers ||4. Describe an efficient and effective method which can be used to prevent violations of computer security procedures: |asdfljasl|
+|6. Explain a plan of action which will safeguard computer files against modification, destruction or disclosure: |al;skdjlk|
+|24. How can you evaluated how Mature is your SOC: |asdl;fgh|
