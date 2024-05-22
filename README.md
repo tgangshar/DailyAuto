@@ -1,5 +1,14 @@
  *Dailyauto.py*
-A script to not only automate daily tasks but also documenting 
+Scripts to not only automate daily tasks but also documenting 
+
+# Scripts
+## Job Search
+- Creates a menu of declared companies and job boards 
+inProgress: app gui
+## Interview
+- Menu for questions and response to interviews
+InProgress: Database for answers (also achieves states)
+
 
 Learning Functional programing
 # Current Daily Tasks: 
